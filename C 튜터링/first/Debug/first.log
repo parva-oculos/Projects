@@ -1,0 +1,8 @@
+﻿  20161208-1.c
+c:\users\현종\documents\visual studio 2015\projects\c 튜터링\first\20161208-1.c(9): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\c 튜터링\first\20161208-1.c(9): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\c 튜터링\first\20161208-1.c(9): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\c 튜터링\first\20161208-1.c(9): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\c 튜터링\first\20161208-1.c(9): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'double'입니다.
+  first.vcxproj -> C:\Users\현종\Documents\Visual Studio 2015\Projects\C 튜터링\Debug\first.exe
+  first.vcxproj -> C:\Users\현종\Documents\Visual Studio 2015\Projects\C 튜터링\Debug\first.pdb (Full PDB)

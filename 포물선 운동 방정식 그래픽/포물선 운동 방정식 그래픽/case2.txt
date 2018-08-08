@@ -1,0 +1,188 @@
+# define _CRT_SECURE_NO_WARNINGS    // 보안 씹어주는 행
+# include <stdio.h>
+# include <math.h>
+# include <stdlib.h>
+# include <time.h>
+# include <Windows.h>
+
+double gaussianRandom(void);   // GaussianRandom함수 선행처리
+
+int main()
+{
+	double a = 0;
+
+	int i;
+	double arr[5000] = { 0, };
+	double R = 0.8;
+	int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0, G = 0, H = 0;
+
+	FILE*Moon;
+	Moon = fopen("C:\\Moon\\Moon3.txt", "wt");
+
+	srand((unsigned)time(NULL));        // rand함수 선행
+
+	for (i = 0; i < 5000; i += 1)      // 5000번 랜덤 찍기
+	{
+		a = gaussianRandom();
+		arr[i] = a;
+		if (-4 <= arr[i] && arr[i] < -3)
+			A++;
+		else if (-3 <= arr[i] && arr[i] < -2)
+			B++;
+		else if (-2 <= arr[i] && arr[i] < -1)
+			C++;
+		else if (-1 <= arr[i] && arr[i] < 0)
+			D++;
+		else if (0 <= arr[i] && arr[i] < 1)
+			E++;
+		else if (1 <= arr[i] && arr[i] < 2)
+			F++;
+		else if (2 <= arr[i] && arr[i] < 3)
+			G++;
+		else if (3 <= arr[i] && arr[i] < 4)
+			H++;
+	}
+	fprintf(Moon, "lf \n lf \n lf \n lf \n lf \n lf \n lf \n lf \n", A, B, C, D, E, F, G, H);
+
+	return 0;
+
+}
+
+double gaussianRandom(void)
+{
+	double v1, v2, s;
+
+	do
+	{
+		v1 = 2 * ((double)rand() / RAND_MAX) - 1;      // -1.0 ~ 1seq2.0 까지의 값
+		v2 = 2 * ((double)rand() / RAND_MAX) - 1;      // -1.0 ~ 1.0 까지의 값
+		s = v1 * v1 + v2 * v2;
+	}
+
+	while (s >= 1 || s == 0);
+
+	s = sqrt((-2 * log(s)) / s);
+
+	return v1 * s;
+}
+
+
+
+
+#include <stdio.h>
+
+
+int main() {
+	int data[] = { 20,1,50,55,34,21,4,66,71,8 };
+	int i;
+
+	printf(" **** 소트되기 전의 데이터 출력 ****\n");
+	for (i = 0; i < 10; i++) 
+		printf("%3d", data[i]);
+	printf("\n");
+
+	void selection_sort(data);
+
+	printf(" **** 소트된 후의 데이터 출력 ****\n");
+	for (i = 0; i < 10; i++) 
+		printf("%3d", data[i]);
+	printf("\n");
+}
+
+void selection_sort(int *d) 
+{
+	int i, j, t, min;
+	for (i = 0; i < 9; i++) 
+	{
+		min = i;
+		for (j = i + 1; j < 10; j++) 
+		{ if (d[min] > d[j]) min = j;}
+		t = d[i];
+		d[i] = d[min];
+		d[min] = t;
+	}
+}
+
+
+
+
+
+#include <stdio.h>
+
+int binsearch(int list[], int searchnum, int left, int right)
+{
+	//searchnum에 대해 list[0]<=list[1] ... list[n-1]을 탐색. 찾으면 그 위치를 반환 / 못찾으면 -1 반환
+	int middle;
+	while (left <= right) {
+		middle = (left + right) / 2;
+		//printf("%d %d %d %d \n", left ,right, middle, searchnum);
+		if (list[middle] > searchnum)
+			left = middle + 1;
+		else if (list[middle] > searchnum)
+			right = middle - 1;
+		else if (list[middle] = searchnum)
+			return middle;
+	}
+	return -1;
+}
+
+//main program
+int main()
+{
+	int data[16] = { 12,23,25,34,45,46,57,58,69,72,75,82,86,89,97,99 };
+	int found;
+	found = binsearch(data, 34, 0, 15);//34를 찾는다
+	if (found == -1)
+	{
+		printf(" Not Found \n");
+	}
+	else {
+		printf("* it's at %d !\n", found);
+	}
+}
+
+
+
+
+
+#include <stdio.h>
+#define MAX_STACK_SIZE 100
+int stack[MAX_STACK_SIZE];  
+int top = -1;
+
+void push(int item) 
+{
+  if(top >= MAX_STACK_SIZE - 1) {
+    printf("stack_full()\n");
+    return;
+  }
+  stack[++top] = item;
+}                    
+
+int pop() {
+   if(top == -1)
+   { 
+      printf("stack_empty()\n"); exit();
+   }
+   return stack[(top)--];
+}
+
+int isempty()
+{ if( top == -1 ) return(1); else return(0); }
+
+int isfull()
+{ if ( top >= MAX_STACK_SIZE -1 ) return(1); else return(0); }
+
+int main()
+{
+   int e;
+   push(20);
+   push(40);
+   push(60);
+   printf(" Begin Stack Test ...\n");
+   while(!isempty())
+   {
+      e = pop();
+      printf("value = %d\n", e);
+   }
+}       

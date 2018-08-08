@@ -1,0 +1,8 @@
+﻿  포물선운동.c
+c:\users\현종\documents\visual studio 2015\projects\study\study\포물선운동.c(14): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\study\study\포물선운동.c(14): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\study\study\포물선운동.c(14): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\study\study\포물선운동.c(14): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 4의 형식이 'double'입니다.
+c:\users\현종\documents\visual studio 2015\projects\study\study\포물선운동.c(14): warning C4477: 'scanf_s' : 서식 문자열 '%lf'에 'double *' 형식의 인수가 필요하지만 variadic 인수 5의 형식이 'double'입니다.
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: _WinMain@16 외부 기호(참조 위치: "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수)에서 확인하지 못했습니다.
+C:\Users\현종\Documents\Visual Studio 2015\Projects\study\Debug\study.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
